@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form, InputGroup } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { AdminTopBar } from "../components/AdminTopBar";
 import { SearchBar } from "../components/SearchBar";
 
 export interface Client {
@@ -12,13 +13,13 @@ export interface Client {
   city: string;
 }
 
-export const ClientsPage: React.FunctionComponent = () => {
+export const Guide: React.FunctionComponent = () => {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/clients")
+    fetch("http://127.0.0.1:5000/guide")
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -33,13 +34,15 @@ export const ClientsPage: React.FunctionComponent = () => {
   }, []);
 
   const LoadDetail = (id: Number) => {
-    navigate("/admin/client/" + id);
+    navigate("/admin/guida/" + id);
   };
 
   return (
     <div>
+      <AdminTopBar />
       <SearchBar search={search} setSearch={setSearch} />
-      <div className="container max-width90p text-center margin-search-bar">
+      <div className="container max-width90p text-center margin-search-bar px-0 mt-0">
+        <h3 className="py-3 my-0">RUBRICA GUIDE</h3>
         <div className="row">
           {data &&
             data

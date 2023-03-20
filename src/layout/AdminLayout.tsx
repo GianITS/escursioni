@@ -13,7 +13,7 @@ const { sidebarOpen, setSidebarOpen } = props;
     <div className='container-admin'>
         <AdminSideBar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         <div className={"main "+(sidebarOpen? "small":"large")}>
-          <AdminTopBar />
+          {/* <AdminTopBar /> */}
           <Outlet />
         </div>
     </div>

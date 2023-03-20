@@ -4,11 +4,27 @@
 .thLightDark{
   background-color: #36363d !important;
 }
+.bg-trasparent {
+  background: transparent !important;
+  transition: all .3s ease-in-out;
+}
+.bg-active {
+  background: #91541C !important;
+  transition: all .3s ease-in-out;
+}
 .pointer {
   cursor: pointer;
 }
 .h-auto {
   height: auto;
+}
+.height-150 {
+  height: 150px;
+  transition: all .3s ease-in-out;
+}
+.height-15 {
+  height: 15px;
+  transition: all .3s ease-in-out;
 }
 .App {
   text-align: center;
@@ -87,7 +103,7 @@ input:focus {
 }
 .topBar {
   position: sticky;
-  top: 1px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 55px;
@@ -112,7 +128,8 @@ input:focus {
   align-items: center;
   z-index: 1000;
   background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,1) 100%);
+  /* background: linear-gradient(0deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,1) 100%); */
+  background: #fff;
   padding: 20px 0;
 }
 .input-search-bar {
@@ -137,19 +154,25 @@ input:focus {
   transition: all .1s ease-in-out;
 }
 .side-close {
-  width: 100px;
+  width: 80px;
   transition: all .1s ease-in-out;
+}
+.logo {
+  width: 100%;
+  height: 100%;
+  background: url("./images/Logo.png") no-repeat center center;
+  background-size: auto;
 }
 .btnMenu {
   position: absolute;
-  top: 50%;
-  right: 10px;
+  top: 3px;
+  right: 15px;
   background-color: transparent !important;
   border: none !important;
-  transform: translateY(-50%);
+  z-index: 100;
 }
 .max-width90p {
-  max-width: 90%;
+  max-width: 90% !important;
 }
 .h-30 {
   height: 30px;
@@ -170,7 +193,7 @@ li {
 .container-admin {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: max-content;
   display: flex;
   justify-content: flex-end;
 }
@@ -178,8 +201,68 @@ li {
   height: 100vh;
 }
 .large {
-  width: calc(100% - 100px);
+  width: calc(100% - 80px);
 }
 .small {
   width: calc(100% - 250px);
+}
+
+/* kpi */
+
+.kpi {
+  height: 220px !important;
+  background-color: #FEFAE0 !important;
+}
+.kpi::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -20px;
+  width: 150px;
+  height: 180px;
+  background: url("./images/kpi1.png") no-repeat center center;
+  background-size: auto;
+  z-index: 101;
+}
+.width-60p {
+  width: 60%;
+}
+.kpi-number {
+  font-size: 3rem;
+}
+
+/* Card Guide */
+
+.imgGuida {
+  width: 100px;
+  aspect-ratio: 1;
+  background: url("./images/imran.png") no-repeat center center;
+  background-size: auto;
+}
+
+/* tabella clienti */
+
+.spinner {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+.table-head {
+  position: sticky;
+  height: 50px;
+  top: 110px;
+  z-index: 102;
+}
+tr {
+  transition: all .3s ease-in-out;
+}
+.table-hover:hover {
+  background-color: #cacaca;
+  transition: all .3s ease-in-out;
 }

@@ -12,7 +12,7 @@ export const SearchBar: React.FunctionComponent<{
           <InputGroup>
             <Form.Control
               onChange={(e) => {
-                setSearch(e.target.value);
+                setSearch(e.target.value.toLowerCase());
               }}
               placeholder="Cerca..."
             />

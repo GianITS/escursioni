@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { AdminSideBar } from "../components/AdminSideBar";
-import { Client } from "./ClientsPage";
+import { Client } from "./Guide";
 
 export const SingleClient: React.FunctionComponent<{
   sidebarOpen: boolean;
