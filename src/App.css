@@ -1,38 +1,185 @@
+.thDark{
+  background-color: #2b2b33 !important;
+}
+.thLightDark{
+  background-color: #36363d !important;
+}
+.pointer {
+  cursor: pointer;
+}
+.h-auto {
+  height: auto;
+}
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.carousel-container {
+  margin: 80px 20px 30px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.carousel {
+  height: 60vh;
+  margin: 50px 20px 50px;
+  background: url("https://source.unsplash.com/WLUHO9A_xik/1600x900");
+  background-size: cover;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+}
+.btnContent {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: flex-end;
+  gap: .5rem;
+  margin-top: 1rem;
+}
+.titleWrapper {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+.childrenWrapper {
+  display: grid;
+  gap: 1rem .5rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  grid-template-columns: auto minmax(auto, 400px);
 }
-
-.App-link {
-  color: #61dafb;
+label {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  padding: 4px 10px;
+  margin-left: 10px;
+  background: transparent;
+  color: whitesmoke;
+  outline: none;
+  border: 2px solid transparent;
+  border-bottom: 2px solid rgb(109, 0, 128);
+  transition: all .3s linear;
+}
+input:focus {
+  background-color: #36363d;
+}
+.btn-custom {
+  background-color: purple;
+  font-size: 22px;
+  padding: 4px 25px;
+  color: whitesmoke;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .6);
+  cursor: pointer;
+}
+.btn-submit {
+  background-color: rgb(39, 217, 39);
+  color: black;
+}
+.span-register {
+  font-size: 20px;
+  color: rgb(255, 217, 0);
+  cursor: pointer;
+}
+.margin-header {
+  margin-top: 150px;
+}
+.topBar {
+  position: sticky;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #91541C;
+  padding: 5px 10px;
+  z-index: 1000;
+}
+.margin-search-bar {
+  margin-top: 30px;
+}
+.search-bar {
+  position: sticky;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,1) 100%);
+  padding: 20px 0;
+}
+.input-search-bar {
+  width: 90%;
+}
+.img {
+  height: 100%;
+  background: url("https://source.unsplash.com/WLUHO9A_xik/1600x900");
+  background-size: cover;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1001;
+  background-color: #663B14;
+  transition: all .1s ease-in-out;
+}
+.side-open {
+  width: 250px;
+  transition: all .1s ease-in-out;
+}
+.side-close {
+  width: 100px;
+  transition: all .1s ease-in-out;
+}
+.btnMenu {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  background-color: transparent !important;
+  border: none !important;
+  transform: translateY(-50%);
+}
+.max-width90p {
+  max-width: 90%;
+}
+.h-30 {
+  height: 30px;
+}
+.h-100 {
+  height: 100vh;
+}
+.icon-menu-size {
+  font-size: 30px;
+}
+li {
+  transition: all .3s ease-in-out;
+}
+.li-hover:hover {
+  background-color: #91541C;
+  transition: all .3s ease-in-out;
+}
+.container-admin {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+}
+.main {
+  height: 100vh;
+}
+.large {
+  width: calc(100% - 100px);
+}
+.small {
+  width: calc(100% - 250px);
 }
